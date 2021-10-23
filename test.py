@@ -1,9 +1,27 @@
-list_value = {}
+import requests
+import time
 
-list_value["1"] = "ankie"
+# URL = "http://localhost:5000/mine_block"
+# headers = {'Content-Type': 'application/json', 'Accept' : 'application/json'}
+# data = [
+#     {
+#         'value' : 60
+#     }
+# ]
 
-print(list_value["1"])
-try:
-    print(list_value["2"])
-except KeyError as e:
-    print('I got a KeyError - reason "%s"' % str(e))
+# start = int(time.time()*1000)
+# r = requests.post(url = URL, json = data, headers = headers)
+# finish = int(time.time()*1000)
+
+# print(finish - start)
+# print(r.text)
+
+G_url = "http://localhost:5000/mine_block"
+
+start = int(time.time()*100000)
+headers = {'Content-Type': 'application/json', 'Accept' : 'application/json'}
+
+r = requests.get(url = G_url)
+finish = int(time.time()*100000)
+
+print(finish - start)

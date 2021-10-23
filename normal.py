@@ -57,7 +57,7 @@ for temp in qf:
     no_thres.append((inv(1 - temp)*no_x_variance) + no_x_mean)
 
 plt.plot(qf,thres, label = 'with primary user')
-plt.plot(qf, no_thres, label ='without primary user')
+#plt.plot(qf, no_thres, label ='without primary user')
 plt.xlabel('Probability of False Alarm')                
 plt.ylabel('Threshold')
 plt.legend()
